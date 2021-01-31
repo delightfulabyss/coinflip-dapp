@@ -19,7 +19,7 @@ This project was created with:
 - Node v10.16.3
 - Web3.js v1.2.9
 - jQuery v3.4.1
-- Bootstrap v5.0.0-beta1
+- Bootstrap v4.5.2
 
 ## Setup
 
