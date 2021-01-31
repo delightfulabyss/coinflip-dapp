@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Coin Flip Game</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./request-animationFrame.js"></script>
+    <script src="./web-animations.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      rel="shortcut icon"
+      href="https://lenadesign.org/wp-content/uploads/2020/06/head.png?w=100"
+    />
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-5">Coin Flip dApp</h1>
+        <p class="lead">If the coin lands on heads, you win!</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="progress">
+            <div
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              role="progressbar"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width: 0%"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="mt-3 mb-3" id="coin">
+            <img
+              class="position-absolute top-0 end-45"
+              id="front"
+              src="https://lenadesign.org/wp-content/uploads/2020/06/head.png?w=100"
+            />
+            <img
+              id="back"
+              class="position-absolute top-0 end-45"
+              src="https://lenadesign.org/wp-content/uploads/2020/06/tail.png?w=100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <div class="input-group mb-3 translate-middle">
+          <div class="input-group-prepend">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="flip-coin-button"
+            >
+              Flip Coin
+            </button>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter an amount of Ether to bet"
+            aria-label="Enter an amount of Ether to bet"
+            aria-describedby="basic-addon1"
+            id="bet-amount-input"
+          />
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </body>
+</html>

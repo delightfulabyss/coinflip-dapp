@@ -1,0 +1,19 @@
+#front,
+#back {
+  width: 100px;
+  height: 100px;
+}
+
+#coin {
+  position: relative;
+  transform-style: preserve-3d;
+  height: 200px;
+}
+
+#front {
+  transform: translateZ(1px);
+}
+
+#back {
+  transform: translateZ(-1px) rotateY(180deg);
+}
