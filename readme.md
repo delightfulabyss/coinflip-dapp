@@ -8,7 +8,7 @@
 
 ## General Information
 
-This project is a decentralized betting game where a user can bet an amount of Ether using an Ethereum smart contract and either wins or loses base on 50:50 odds. When the player places their bet, a random number, either 1 or 0, is requested from [Provable](https://provable.xyz/)'s oracle service. If the random number is 0, the player receives double their bet. If the random number is 1, the player loses their bet to the smart contract. This project was built as part of an educational exercise in the [Ivan on Tech Blockchain Academy](https://academy.ivanontech.com/).
+This project is a decentralized betting game where a user can bet an amount of Ether using an Ethereum smart contract and either wins or loses base on 50:50 odds. When the player places their bet, a random number, either 1 or 0, is requested from [Provable](https://provable.xyz/)'s oracle service. If the random number is 0, the player receives double their bet. If the random number is 1, the player loses their bet to the smart contract. This project was built as part of coursework in the [Ivan on Tech Blockchain Academy](https://academy.ivanontech.com/).
 
 ## Technologies
 
