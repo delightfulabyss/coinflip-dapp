@@ -12,8 +12,14 @@
 
 #front {
   transform: translateZ(1px);
+  position: absolute;
+  top: 0;
+  left: 45%;
 }
 
 #back {
   transform: translateZ(-1px) rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 45%;
 }
