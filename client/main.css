@@ -7,7 +7,7 @@
 #coin {
   position: relative;
   transform-style: preserve-3d;
-  height: 200px;
+  height: 100px;
 }
 
 #front {
