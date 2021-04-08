@@ -75,9 +75,9 @@ contract Coinflip is Ownable, usingProvable {
             uint256 playerBet = gameSessions[playerAddress].playerBet;
             if (randomNumber == 0) {
                 contractBalance -= playerBet;
-                payable(playerAddress).transfer(playerBet * 2);
                 gameSessions[playerAddress].playerBalance += playerBet;
                 gameSessions[playerAddress].gameWin = true;
+                payable(playerAddress).transfer(playerBet * 2);
             } else if (randomNumber == 1) {
                 contractBalance += playerBet;
                 gameSessions[playerAddress].gameWin = false;
