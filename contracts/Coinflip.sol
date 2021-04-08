@@ -2,8 +2,10 @@ pragma solidity >0.6.1 <0.7.0;
 pragma experimental ABIEncoderV2;
 import "./Ownable.sol";
 import "./provableAPI_0.6.sol";
+import "./node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol"
 
 contract Coinflip is Ownable, usingProvable {
+    using SafeMath for uint256;
     //Provable Constants
     uint256 constant NUM_RANDOM_BYTES_REQUESTED = 1;
 
