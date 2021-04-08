@@ -1,4 +1,4 @@
-pragma solidity >0.6.1 <0.7.0;
+pragma solidity >=0.8.0;
 pragma experimental ABIEncoderV2;
 import "./Ownable.sol";
 import "./provableAPI_0.6.sol";
