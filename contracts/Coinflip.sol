@@ -93,7 +93,7 @@ contract Coinflip is Ownable, usingProvable {
     }
 
     //Coinflip Contract Functions
-    function isAccount(address playerAddress) private view returns (bool) {
+    function isPlayer(address playerAddress) private view returns (bool) {
         if (playerAccounts.length == 0) return false;
         return (playerAccounts[gameSessions[playerAddress].listIndex] ==
             playerAddress);
@@ -141,7 +141,7 @@ contract Coinflip is Ownable, usingProvable {
             "Contract balance has insufficient funds. Please try again later."
         );
 
-        if (isAccount(msg.sender) == false) {
+        if (isPlayer(msg.sender) == false) {
             createSession(msg.sender, msg.value);
             update();
         } else {
