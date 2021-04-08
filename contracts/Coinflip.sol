@@ -107,7 +107,7 @@ contract Coinflip is Ownable, usingProvable {
         return gameSessions[playerAddress];
     }
 
-    function createSession(address _playerAddress, uint256 _playerBet)
+    function _createSession(address _playerAddress, uint256 _playerBet)
         private
         returns (bool)
     {
@@ -126,7 +126,7 @@ contract Coinflip is Ownable, usingProvable {
         return playerAccounts;
     }
 
-    function updateSession(address _playerAddress, uint256 _playerBet) private {
+    function _updateSession(address _playerAddress, uint256 _playerBet) private {
         gameSessions[_playerAddress].playerBet = _playerBet;
     }
 
@@ -142,10 +142,10 @@ contract Coinflip is Ownable, usingProvable {
         );
 
         if (isPlayer(msg.sender) == false) {
-            createSession(msg.sender, msg.value);
+            _createSession(msg.sender, msg.value);
             update();
         } else {
-            updateSession(msg.sender, msg.value);
+            _updateSession(msg.sender, msg.value);
             update();
         }
     }
