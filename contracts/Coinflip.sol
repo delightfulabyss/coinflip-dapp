@@ -119,7 +119,7 @@ contract Coinflip is Ownable, usingProvable {
         newSession.playerBet = _playerBet;
         newSession.listIndex = playerAccounts.length - 1;
         newSession.gameWin = false;
-        insertSession(newSession);
+        _insertSession(newSession);
     }
 
     function getAccounts() public view returns (address[] memory) {
@@ -130,7 +130,7 @@ contract Coinflip is Ownable, usingProvable {
         gameSessions[_playerAddress].playerBet = _playerBet;
     }
 
-    function insertSession(Session memory _newSession) private {
+    function _insertSession(Session memory _newSession) private {
         address creator = msg.sender;
         gameSessions[creator] = _newSession;
     }
